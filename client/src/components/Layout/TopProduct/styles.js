@@ -22,7 +22,7 @@ export default makeStyles((theme) => ({
             display: 'block',
             position: 'absolute',
             width: 'calc(100% - 16px)',
-            height: '1px',
+            height: '0.5px',
             left: '8px',
             background: '#000',
         },

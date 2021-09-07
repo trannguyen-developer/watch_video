@@ -21,27 +21,27 @@ class Home extends Component {
     <Router>
 		<div className={classes.home}>
 			<header >
-			<Container maxWidth='lg' fixed>
+			<Container className="container" fixed maxWidth='lg'>
 				<Header />
 			</Container>
 			</header>
 			<main>
-			<Container fixed>
+				<Container className="container" fixed maxWidth='lg'>
 					<Route exact path='/' component={SliderBar} />
 					<Grid container spacing={3}>
-						<Grid item xs={12} sm={8}>
+						<Grid item xs={12} md={8}>
 							<Route path='/detail' component={Watch} />
 							<ShowProduct/>
 						</Grid>
-						<Grid item xs={12} sm={4}>
+						<Grid item xs={12} md={4}>
 							<TopProduct />
 							<KeyPopular style={{marginTop: '20px'}} />
 						</Grid>
 					</Grid>
-			</Container>
+				</Container>
 			</main>
-			<footer style={{marginTop: '30px'}}>
-				<Container fixed>
+			<footer style={{marginTop: '20px'}}>
+				<Container className="container" fixed maxWidth='lg'>
 					<Footer />
 				</Container>
 			</footer>

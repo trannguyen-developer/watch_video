@@ -8,7 +8,7 @@ const port = process.env.PORT || 5000;
 // connect to db
 db.connect()
 
-app.get('/api/hello', (req, res) => {
+app.get('/api/GetData', (req, res) => {
   All_video.find({}, function(err, videos) {
     if(!err) {
       videos = videos.map(video => video.toObject())
@@ -18,5 +18,11 @@ app.get('/api/hello', (req, res) => {
     res.status(400).json({err: 'ERROR!!!'})
   })
 });
+
+app.get('/api/admin/create', (req, res) => {
+  console.log(req.query);
+  console.log('fdfdf');
+  res.json({test: 'ffff'})
+})
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

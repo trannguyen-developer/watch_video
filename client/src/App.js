@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 import Home from './components/Pages/Home'
+import Admin from './components/Pages/Admin'
 
 class App extends Component {
     constructor(props) {
@@ -13,7 +15,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-        fetch('/api/hello')
+        fetch('/api/GetData')
         .then(response => response.json())
         .then(data => this.setState({ message: data }))
     };
@@ -21,9 +23,10 @@ class App extends Component {
     render() {
         console.log(this.state);
         return(
-        <Fragment>
-            <Home />
-        </Fragment>
+            <Router>
+                <Route exact path="/" component={Home} />
+                <Route path="/admin" component={Admin} />
+            </Router>
         )
     };
 };

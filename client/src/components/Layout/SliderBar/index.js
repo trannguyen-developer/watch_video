@@ -1,7 +1,7 @@
 import React, {useRef, useState, useEffect} from 'react';
 import classes from './style.module.scss';
 import { NavigateBefore, NavigateNext } from '@material-ui/icons';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const SliderBar = (props) => {
     const listSlider = useRef()

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Typography } from '@material-ui/core';
-import useStyles from './styles.js'
+import useStyles from './styles.js';
+import { Link } from 'react-router-dom';
 
 const TopProduct = () => {
     const classes = useStyles();
@@ -23,7 +24,7 @@ const TopProduct = () => {
             <ul className={classes.listProduct}>
                 <li>
                     <div>
-                        <a href="#" style={{backgroundImage: 'url(https://i.ytimg.com/vi/CShWpR1A13Y/hq720.jpg)'}}></a>
+                        <Link to="/test" style={{backgroundImage: 'url(https://i.ytimg.com/vi/CShWpR1A13Y/hq720.jpg)'}}></Link>
                     </div>
                     <div className={classes.nameProduct}>
                         <p>SOFAR - BINZ DA POET | OFFICIAL MUSIC VIDEO</p>
@@ -32,7 +33,7 @@ const TopProduct = () => {
                 </li>
                 <li>
                     <div>
-                        <a href="#" style={{backgroundImage: 'url(https://i.ytimg.com/vi/CShWpR1A13Y/hq720.jpg)'}}></a>
+                        <Link to="/test" style={{backgroundImage: 'url(https://i.ytimg.com/vi/CShWpR1A13Y/hq720.jpg)'}}></Link>
                     </div>
                     <div className={classes.nameProduct}>
                         <p>SOFAR - BINZ DA POET | OFFICIAL MUSIC VIDEO</p>
@@ -41,7 +42,7 @@ const TopProduct = () => {
                 </li>
                 <li>
                     <div>
-                        <a href="#" style={{backgroundImage: 'url(https://i.ytimg.com/vi/CShWpR1A13Y/hq720.jpg)'}}></a>
+                        <Link to="/test" style={{backgroundImage: 'url(https://i.ytimg.com/vi/CShWpR1A13Y/hq720.jpg)'}}></Link>
                     </div>
                     <div className={classes.nameProduct}>
                         <p>SOFAR - BINZ DA POET | OFFICIAL MUSIC VIDEO</p>
@@ -50,7 +51,7 @@ const TopProduct = () => {
                 </li>
                 <li>
                     <div>
-                        <a href="#" style={{backgroundImage: 'url(https://i.ytimg.com/vi/CShWpR1A13Y/hq720.jpg)'}}></a>
+                        <Link to="/test" style={{backgroundImage: 'url(https://i.ytimg.com/vi/CShWpR1A13Y/hq720.jpg)'}}></Link>
                     </div>
                     <div className={classes.nameProduct}>
                         <p>SOFAR - BINZ DA POET | OFFICIAL MUSIC VIDEO SOFAR - BINZ DA POET | OFFICIAL MUSIC VIDEO OFFICIAL MUSIC VIDEO OFFICIAL MUSIC VIDEO OFFICIAL MUSIC VIDEO </p>
@@ -59,7 +60,7 @@ const TopProduct = () => {
                 </li>
                 <li>
                     <div>
-                        <a href="#" style={{backgroundImage: 'url(https://i.ytimg.com/vi/CShWpR1A13Y/hq720.jpg)'}}></a>
+                        <Link to="/test" style={{backgroundImage: 'url(https://i.ytimg.com/vi/CShWpR1A13Y/hq720.jpg)'}}></Link>
                     </div>
                     <div className={classes.nameProduct}>
                         <p>SOFAR - BINZ DA POET | OFFICIAL MUSIC VIDEO</p>

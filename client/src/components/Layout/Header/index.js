@@ -1,6 +1,6 @@
-import React, {Fragment, useState} from 'react';
+import React, { useState } from 'react';
 import { Box, useMediaQuery  } from '@material-ui/core';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {Search, List, Close} from '@material-ui/icons';
 import Navbar from '../../ComponentsChild/Navbar'
 import Modal from '../../UI/Modal'

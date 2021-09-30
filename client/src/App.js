@@ -1,34 +1,30 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
+import { BrowserRouter as Router, Route } from "react-router-dom"
 import Home from './components/Pages/Home'
 import Admin from './components/Pages/Admin'
+import axios from "axios";
 
-class App extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            message: '',
-            data: '999',
-            test: 'tester'
-        };
-    }
+const App = () => {
 
-    componentDidMount() {
-        fetch('/api/GetData')
-        .then(response => response.json())
-        .then(data => this.setState({ message: data }))
-    };
-  
-    render() {
-        console.log(this.state);
-        return(
+    const [allVideo, setAllVideo] = useState()
+
+    useEffect(() => {
+        axios.get('/api/get-data').then((response) => {
+            console.log(response.data);
+            setAllVideo(response.data);
+        });
+    }, []);
+
+    
+    return (
+        <Fragment>
             <Router>
                 <Route exact path="/" component={Home} />
                 <Route path="/admin" component={Admin} />
             </Router>
-        )
-    };
+        </Fragment>
+    );
 };
 
 

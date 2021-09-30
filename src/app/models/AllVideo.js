@@ -8,4 +8,4 @@ const All_video = new Schema ({
     { timestamps: true }
 )
 
-module.exports = mongoose.model('allvideo', All_video)
+module.exports = mongoose.model('allVideo', All_video)

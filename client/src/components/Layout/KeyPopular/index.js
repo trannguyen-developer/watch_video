@@ -1,6 +1,7 @@
-import { Grid, Typography } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import React from 'react';
 import useStyles from './styles'
+import { Link } from 'react-router-dom';
 
 const KeyPopular = props => {
     const classes = useStyles()
@@ -10,21 +11,21 @@ const KeyPopular = props => {
                 Từ khóa nổi bật
             </Typography>
             <div className={classes.tagName}>
-                <a href="#">
+                <Link to="/test">
                     <p>Ca nhạc</p>
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="/test">
                     <p>Học english</p>
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="/test">
                     <p>Học english</p>
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="/test">
                     <p>Học english</p>
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="/test">
                     <p>Học english</p>
-                </a>
+                </Link>
             </div>
         </div>
     )

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {Container, Grid, Box } from '@material-ui/core';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {Container, Grid } from '@material-ui/core';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import classes from './styles.module.scss'
 import Header from '../../Layout/Header'

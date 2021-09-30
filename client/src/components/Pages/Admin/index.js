@@ -2,7 +2,6 @@ import React from 'react';
 import Navbar from '../../Admin/Navbar'
 import CreateProduct from '../../Admin/CreateProduct'
 import { makeStyles } from '@material-ui/core'
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 
 const useStyles = makeStyles({
     content: {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles({
     navbar: {
@@ -26,10 +27,18 @@ const Navbar = props => {
     const classes = useStyles();
     return (
         <ul className={`${classes.navbar} ${props.className}`}>
-            <li><a href="#">MV</a></li>
-            <li><a href="#">Mới nhất</a></li>
-            <li><a href="#">Learn</a></li>
-            <li><a href="#">English</a></li>
+            <li>
+                <Link to="#">MV</Link>
+            </li>
+            <li>
+                <Link to="#">Mới nhất</Link>
+            </li>
+            <li>
+                <Link to="#">Learn</Link>
+            </li>
+            <li>
+                <Link to="#">English</Link>
+            </li>
         </ul>
     )
 }

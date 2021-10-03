@@ -1,45 +1,44 @@
 .content {
-    margin-left: 240px;
-    background-color: #f3f4f8;
-    padding: 40px;
+  margin-left: 240px;
+  background-color: #f3f4f8;
+  padding: 40px;
 }
 
 .navbar {
-    display: flex;
-    background-color: #4d73df;
-    position: fixed;
-    padding: 15px;
-    width: 240px;
-    height: 100vh;
-    flex-direction: column;
-    img {
-        height: 45px;
+  display: flex;
+  background-color: #4d73df;
+  position: fixed;
+  padding: 24px 15px;
+  width: 240px;
+  height: 100vh;
+  flex-direction: column;
+  img {
+    height: 45px;
+    cursor: pointer;
+  }
+  ul {
+    .navbarItem {
+      text-decoration: none;
+      display: block;
+      color: #ebebeb;
+      padding-top: 30px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      & svg {
+        font-size: 20px;
+      }
+      & p {
+        margin-left: 8px;
+      }
+      &.selected {
+        color: rgb(234, 128, 255);
+        font-weight: bold;
+      }
     }
-    ul {
-        li {
-            text-decoration: none;
-            display: block;
-            color: #ebebeb;
-            padding-top: 30px;
-            cursor: pointer;
-            & span {
-                display: flex;
-                align-items: center;
-                & svg {
-                    font-size: 20px;
-                }
-                & p {
-                    margin-left: 8px;
-                }
-            }
-            &.active {
-                color: rgb(234, 128, 255);
-                font-weight: bold;
-            }
-        }
-    }
+  }
 }
 
 .lineHight {
-    border-top: 1px solid rgba(255, 255, 255, 0.4)
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
 }

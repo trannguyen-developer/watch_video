@@ -1,5 +1,8 @@
+header {
+    background-color: #000000;
+}
+
 .header {
-    background-color: #000;
     color: #b8babc;
     display: flex;
     align-items: center;
@@ -10,6 +13,7 @@
     .logo {
         img {
             display: block;
+            height: 35px !important;
         }
     }
     .search {

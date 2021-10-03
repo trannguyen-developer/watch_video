@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import {Container, Grid } from '@material-ui/core';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import classes from './styles.module.scss'
 import Header from '../../Layout/Header'
-import SliderBar from '../../Layout/SliderBar'
 import Watch from '../../Layout/Watch'
 import ShowProduct from '../../Layout/ShowProduct'
 import TopProduct from '../../Layout/TopProduct'
 import KeyPopular from '../../Layout/KeyPopular'
 import Footer from '../../Layout/Footer'
 
-class Home extends Component {
+class Detail extends Component {
   state = {
     message: ''
   };
@@ -22,9 +20,9 @@ class Home extends Component {
 			<Header />
 			<main>
 				<Container className="container" fixed maxWidth='lg'>
-					<SliderBar />
 					<Grid container spacing={3}>
 						<Grid item xs={12} md={8}>
+							<Watch />
 							<ShowProduct/>
 						</Grid>
 						<Grid item xs={12} md={4}>
@@ -40,4 +38,4 @@ class Home extends Component {
   };
 };
 
-export default Home;
+export default Detail;

@@ -30,3 +30,17 @@ code {
     padding: 0 !important;
   }
 }
+
+
+/* custom */
+.html5-video-container {
+  display: none !important;
+}
+
+.ytp-chrome-top {
+  display: none !important;
+}
+
+.ytp-show-cards-title, .ytp-title-channel {
+  display: none !important;
+}

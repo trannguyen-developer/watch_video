@@ -2,8 +2,12 @@ import React, {useRef, useState, useEffect} from 'react';
 import classes from './style.module.scss';
 import { NavigateBefore, NavigateNext } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux'
 
 const SliderBar = (props) => {
+
+    const allVideo = useSelector(state => state.allVideo)
+        
     const listSlider = useRef()
     const [numberProduct, setNumberProduct] = useState(0)
     
@@ -41,46 +45,12 @@ const SliderBar = (props) => {
             </div>
             {/* list 10 product */}
             <ul className={classes['list-slider']} style={{transform: `translateX(${numberProduct*25}%)`}} ref={listSlider}>
-                <li>
-                    <Link to={"/detail"} style={{backgroundImage: 'url(https://i.ytimg.com/vi/CShWpR1A13Y/hq720.jpg)'}}>
-                    </Link>
-                </li>
-                <li>
-                    <Link to={"/detail"} style={{backgroundImage: 'url(https://i.ytimg.com/vi/5qap5aO4i9A/hq720.jpg)'}}>
-                    </Link>
-                </li>
-                <li>
-                    <Link to={"/detail"} style={{backgroundImage: 'url(https://i.ytimg.com/vi/j5-yKhDd64s/hq720.jpg)'}}>
-                    </Link>
-                </li>
-                <li>
-                    <Link to={"/detail"} style={{backgroundImage: 'url(https://i.ytimg.com/vi/DXqXG621OUI/hq720.jpg)'}}>
-                    </Link>
-                </li>
-                <li>
-                    <Link to={"/detail"} style={{backgroundImage: 'url(https://i.ytimg.com/vi/XGGWhOUYObc/hq720.jpg)'}}>
-                    </Link>
-                </li>
-                <li>
-                    <Link to={"/detail"} style={{backgroundImage: 'url(https://i.ytimg.com/vi/50VNCymT-Cs/hq720.jpg)'}}>
-                    </Link>
-                </li>
-                <li>
-                    <Link to={"/detail"} style={{backgroundImage: 'url(https://i.ytimg.com/vi/CShWpR1A13Y/hq720.jpg)'}}>
-                    </Link>
-                </li>
-                <li>
-                    <Link to={"/detail"} style={{backgroundImage: 'url(https://i.ytimg.com/vi/5qap5aO4i9A/hq720.jpg)'}}>
-                    </Link>
-                </li>
-                <li>
-                    <Link to={"/detail"} style={{backgroundImage: 'url(https://i.ytimg.com/vi/j5-yKhDd64s/hq720.jpg)'}}>
-                    </Link>
-                </li>
-                <li>
-                    <Link to={"/detail"} style={{backgroundImage: 'url(https://i.ytimg.com/vi/DXqXG621OUI/hq720.jpg)'}}>
-                    </Link>
-                </li>
+                {allVideo.map((child, index) => (
+                    <li key={index}>
+                        <Link to={`/detail/${child._id}`} style={{backgroundImage: `url(https://i.ytimg.com/vi/${child.idVideo}/hqdefault.jpg)`}}>
+                        </Link>
+                    </li>
+                ))}
             </ul>
         </div>
     )

@@ -5,10 +5,18 @@ import { Link } from 'react-router-dom'
 const useStyles = makeStyles({
     navbar: {
         display: 'flex',
+        alignItems: 'center',
         '& li': {
             padding: '0 16px',
             '&:last-child': {
                 paddingRight: 0,
+                color: 'red',
+                '& a': {
+                    fontSize: 17,
+                    '&:hover': {
+                        color: '#D40000',
+                    }
+                }
             },
             '& a': {
                 textDecoration: 'none',
@@ -38,6 +46,9 @@ const Navbar = props => {
             </li>
             <li>
                 <Link to="#">English</Link>
+            </li>
+            <li>
+                <Link to={"/admin"}>Admin</Link>
             </li>
         </ul>
     )

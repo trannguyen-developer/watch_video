@@ -5,6 +5,10 @@
     padding: 15px;
     width: 240px;
     height: 100vh;
+    flex-direction: column;
+    img {
+        height: 45px;
+    }
     ul {
         li {
             a {
@@ -15,4 +19,8 @@
             }
         }
     }
+}
+
+.lineHight {
+    border-top: 1px solid rgba(255, 255, 255, 0.4)
 }

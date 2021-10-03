@@ -7,9 +7,9 @@ const styleContent = {
     borderRadius: '4px',
 }
 
-const CreateProduct = props => {
+const UpdateProduct = props => {
     return(
-        <div >
+        <div>
             <form action="/api/admin/create" method="GET">
                 <TextField
                 label="Nhập tiêu đề"
@@ -36,10 +36,10 @@ const CreateProduct = props => {
                 variant="outlined"
                 name="category"
                 />
-                <button type="submit">Tạo mới</button>
+                <button type="submit">Cập nhật</button>
             </form>
         </div>
     )
 }
 
-export default CreateProduct
+export default UpdateProduct

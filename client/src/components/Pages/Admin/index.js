@@ -6,40 +6,9 @@ import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import CreateProduct from "../../Admin/CreateProduct";
 import Management from "../../Admin/Management";
-
-// const create = (
-//   <span>
-//     <AddCircleOutlineIcon />
-//     <p>Create</p>
-//   </span>
-// );
-
-// const update = (
-//   <span>
-//     <ManageAccountsIcon />
-//     <p>Management</p>
-//   </span>
-// );
+import UpdateProduct from "../../Admin/UpdateProduct";
 
 const Admin = (props) => {
-  // const [indexActive, setIndexActive] = useState(0);
-
-  // const handleClickActive = (index) => {
-  //   setIndexActive(index);
-  // };
-
-  // const listNavbar = [create, update, "Delete"];
-
-  // const renderList = listNavbar.map((child, index) => (
-  //   <li
-  //     className={indexActive === index && classes.active}
-  //     onClick={() => handleClickActive(index)}
-  //     key={index}
-  //   >
-  //     {child}
-  //   </li>
-  // ));
-
   return (
     <div>
       {/* navbar */}
@@ -78,6 +47,7 @@ const Admin = (props) => {
       <div className={classes.content}>
         <Route path="/admin/create" component={CreateProduct} />
         <Route path="/admin/manage" component={Management} />
+        <Route path="/admin/update/:idUpdate" component={UpdateProduct} />
       </div>
     </div>
   );

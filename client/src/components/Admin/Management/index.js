@@ -87,7 +87,7 @@ const Management = (props) => {
                         Xóa
                       </div>
                       <Link
-                        to="/admin/update"
+                        to={`/admin/update/${child._id}`}
                         className={`${classes.btn} ${classes.update}`}
                       >
                         Sửa

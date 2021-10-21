@@ -1,4 +1,5 @@
 import { combineReducers } from "redux";
+import axios from "axios";
 
 const allVideoReducer = (state = [], action) => {
   switch (action.type) {
@@ -9,8 +10,18 @@ const allVideoReducer = (state = [], action) => {
   }
 };
 
+const findVideo = (state = {}, action) => {
+  switch (action.type) {
+    case "FIND_ID":
+      return action.payload;
+    default:
+      return state;
+  }
+};
+
 const rootReducer = combineReducers({
   allVideo: allVideoReducer,
+  findVideo: findVideo,
 });
 
 export default rootReducer;

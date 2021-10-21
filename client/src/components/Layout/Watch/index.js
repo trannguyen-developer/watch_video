@@ -13,12 +13,12 @@ import {
 import axios from "axios";
 
 const Watch = (props) => {
-  const [infoVideo, setInfoViedo] = useState([]);
+  const [infoVideo, setInfoVideo] = useState([]);
   const { slug } = useParams();
 
   useEffect(() => {
     axios.get(`/api/video/${slug}`).then((response) => {
-      setInfoViedo(response.data[0]);
+      setInfoVideo(response.data[0]);
     });
   }, []);
 

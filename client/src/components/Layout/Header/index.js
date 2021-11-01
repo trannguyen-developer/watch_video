@@ -3,7 +3,7 @@ import { Box, useMediaQuery } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { Search, List, Close } from "@material-ui/icons";
 import { Container, Grid } from "@material-ui/core";
-import Navbar from "../../ComponentsChild/Navbar";
+import Navbar from "../../Navbar";
 import Modal from "../../UI/Modal";
 import classes from "./style.module.scss";
 

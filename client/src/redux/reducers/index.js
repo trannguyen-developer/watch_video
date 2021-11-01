@@ -1,5 +1,4 @@
 import { combineReducers } from "redux";
-import axios from "axios";
 
 const allVideoReducer = (state = [], action) => {
   switch (action.type) {

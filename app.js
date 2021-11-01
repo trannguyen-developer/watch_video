@@ -52,7 +52,7 @@ app.post("/api/admin/create", async (req, res) => {
     });
     await newVideo.save();
 
-    res.redirect("/admin");
+    res.redirect("/");
   } catch (error) {
     console.log(error);
     res.status(500).json({

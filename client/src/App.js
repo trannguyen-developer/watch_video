@@ -1,8 +1,10 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./components/Pages/Home";
-import Admin from "./components/Pages/Admin";
-import Detail from "./components/Pages/Detail";
+import Home from "./pages/Home";
+import Detail from "./pages/Detail";
+// import Admin from "./pages/Admin";
+import Header from "./components/Layout/Header";
+import Footer from "./components/Layout/Footer";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -18,16 +20,17 @@ const App = () => {
   }, []);
 
   return (
-    <Fragment>
+    <div className="app">
       <Router>
+        <Header />
         <Switch>
-          <Route path="/admin" component={Admin} />
-          <Route path="/admin" component={Admin} />
-          <Route path="/detail/:slug" component={Detail} />
           <Route exact path="/" component={Home} />
+          <Route exact path="/detail/:slug" component={Detail} />
+          {/* <Route path="/admin" component={Admin} /> */}
         </Switch>
+        <Footer />
       </Router>
-    </Fragment>
+    </div>
   );
 };
 

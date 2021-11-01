@@ -47,3 +47,7 @@ code {
 .ytp-title-channel {
   display: none !important;
 }
+
+.app {
+  background-color: #121212;
+}

@@ -1,0 +1,48 @@
+.watch {
+  background-color: #171717;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 20px;
+  .title {
+    color: #ffffff;
+    font-size: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 10px;
+  }
+  .video {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .description {
+    color: #bbbbbb;
+    margin-top: 20px;
+    &-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+    .btn-show-hide {
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  }
+}
+
+.ytp-chrome-top {
+  display: none !important;
+}
+
+.ytp-show-cards-title {
+  display: none !important;
+}

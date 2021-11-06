@@ -1,18 +1,26 @@
 const express = require("express");
 let db = require("./src/config/db");
-const Video = require("./src/app/models/AllVideo.js");
+const AllVideo = require("./src/app/models/AllVideo.js");
+const methodOverride = require("method-override");
 
 const app = express();
 const port = process.env.PORT || 5000;
 
 // important :((
 app.use(express.json());
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
+
+app.use(methodOverride("_method"));
 
 // connect to db
 db.connect();
 
 app.get("/api/get-data", (req, res) => {
-  All_video.find({}, function (err, videos) {
+  AllVideo.find({}, function (err, videos) {
     if (!err) {
       res.json(videos);
       return;
@@ -22,7 +30,7 @@ app.get("/api/get-data", (req, res) => {
 });
 
 app.get("/api/video/:slug", (req, res) => {
-  All_video.find({ _id: req.params.slug }, function (err, video) {
+  AllVideo.find({ _id: req.params.slug }, function (err, video) {
     if (!err) {
       res.json(video);
       return;
@@ -31,21 +39,20 @@ app.get("/api/video/:slug", (req, res) => {
   });
 });
 
+// create
 app.post("/api/admin/create", async (req, res) => {
   const { title, description, idVideo, category } = req.body;
 
   try {
-    const newVideo = new Video({
+    const newVideo = new AllVideo({
       title,
       description,
       idVideo,
       category,
     });
     await newVideo.save();
-    res.json({
-      success: true,
-      message: "Video successfully",
-    });
+
+    res.redirect("/");
   } catch (error) {
     console.log(error);
     res.status(500).json({
@@ -53,6 +60,20 @@ app.post("/api/admin/create", async (req, res) => {
       message: "Internal server error",
     });
   }
+});
+
+// delete
+app.delete("/api/admin/delete/:deleteById", async (req, res) => {
+  AllVideo.deleteOne({ _id: req.params.deleteById }, function (err) {
+    if (!err) {
+      res.redirect("/admin/manage");
+    } else {
+      res.json({
+        success: false,
+        message: "Error",
+      });
+    }
+  });
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

@@ -1,53 +1,53 @@
 header {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 .header {
-    color: #b8babc;
+  color: #b8babc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  .logo {
+    img {
+      display: block;
+      height: 35px !important;
+    }
+  }
+  .search {
+    width: 360px;
+    max-width: 350px;
+    position: relative;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 50px;
-    margin-bottom: 20px;
-    padding: 0 10px;
-    .logo {
-        img {
-            display: block;
-            height: 35px !important;
-        }
+    input {
+      height: 25px;
+      width: 100%;
+      border-radius: 3px;
+      outline: none;
+      padding-left: 6px;
+      border: none;
     }
-    .search {
-        width: 360px;
-        max-width: 350px;
-        position: relative;
-        display: flex;
-        input {
-            height: 25px;
-            width: 100%;
-            border-radius: 3px;
-            outline: none;
-            padding-left: 6px;
-            border: none;
-        }
-        .search-icon {
-            position: absolute;
-            right: 0;
-            width: 32px;
-            height: 25px;
-            text-align: center;
-            color: #333333;
-            cursor: pointer;
-        }
+    .search-icon {
+      position: absolute;
+      right: 0;
+      width: 32px;
+      height: 25px;
+      text-align: center;
+      color: #333333;
+      cursor: pointer;
     }
+  }
 }
 
 @media (max-width: 960px) {
-    .header {
-        .logo {
-            margin: 0 40px;
-        }
-        .search {
-            width: 260px;
-        }
+  .header {
+    .logo {
+      margin: 0 40px;
     }
+    .search {
+      width: 260px;
+    }
+  }
 }

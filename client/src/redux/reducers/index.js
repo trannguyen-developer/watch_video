@@ -1,4 +1,14 @@
+import { GET_AVATAR } from "../constants";
 import { combineReducers } from "redux";
+
+const getAvatar = (state = [], action) => {
+  switch (action.type) {
+    case GET_AVATAR:
+      return "avatar";
+    default:
+      return state;
+  }
+};
 
 const allVideoReducer = (state = [], action) => {
   switch (action.type) {
@@ -21,6 +31,7 @@ const findVideo = (state = {}, action) => {
 const rootReducer = combineReducers({
   allVideo: allVideoReducer,
   findVideo: findVideo,
+  getAvatar: getAvatar,
 });
 
 export default rootReducer;

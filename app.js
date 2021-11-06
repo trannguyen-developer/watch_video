@@ -66,7 +66,7 @@ app.post("/api/admin/create", async (req, res) => {
 app.delete("/api/admin/delete/:deleteById", async (req, res) => {
   AllVideo.deleteOne({ _id: req.params.deleteById }, function (err) {
     if (!err) {
-      res.redirect("/admin");
+      res.redirect("/admin/manage");
     } else {
       res.json({
         success: false,

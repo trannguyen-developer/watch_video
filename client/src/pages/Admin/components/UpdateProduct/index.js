@@ -40,7 +40,7 @@ const UpdateProduct = (props) => {
       });
     }
     getDataVideo();
-  }, []);
+  }, [idUpdate]);
 
   return (
     <div>

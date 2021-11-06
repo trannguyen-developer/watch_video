@@ -23,6 +23,19 @@
   .description {
     color: #bbbbbb;
     margin-top: 20px;
+    &-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+    .btn-show-hide {
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+    }
   }
 }
 

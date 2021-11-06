@@ -48,7 +48,7 @@ const Navbar = (props) => {
         <Link to="#">English</Link>
       </li>
       <li>
-        <Link to={"/admin/create"}>Admin</Link>
+        <Link to="/admin">Admin</Link>
       </li>
     </ul>
   );

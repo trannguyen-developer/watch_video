@@ -2,10 +2,10 @@ import React from "react";
 import { Container, Grid } from "@material-ui/core";
 
 // import classes from "./styles.module.scss";
-import Watch from "../../components/Watch";
-import ShowProduct from "../../components/ShowProduct";
-import TopProduct from "../../components/TopProduct";
-import KeyPopular from "../../components/KeyPopular";
+import Watch from "components/Watch";
+import ShowProduct from "components/ShowProduct";
+import TopProduct from "components/TopProduct";
+import KeyPopular from "components/KeyPopular";
 
 const Detail = () => {
   return (

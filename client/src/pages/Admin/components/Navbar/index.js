@@ -1,10 +1,7 @@
 import React from "react";
 
 import classes from "./styles.module.scss";
-import { Link, NavLink, Route } from "react-router-dom";
-import DashboardIcon from "@mui/icons-material/Dashboard";
-import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
-import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
+import { Link, NavLink } from "react-router-dom";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";

@@ -24,6 +24,8 @@ const style = {
   boxShadow: 24,
   borderRadius: "4px",
   p: 4,
+  outlined: "none",
+  border: "none",
 };
 
 const Management = (props) => {
@@ -79,7 +81,7 @@ const Management = (props) => {
                   <TableCell>{child.createAt}</TableCell>
                   <TableCell>{child.createAt}</TableCell>
                   <TableCell align="right">
-                    <div className="flex">
+                    <div className="flex justify-end">
                       <div
                         className={`${classes.btn} ${classes.delete}`}
                         onClick={() => handleOpen(child._id)}

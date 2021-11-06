@@ -16,4 +16,14 @@ form {
     border-radius: 4px;
     background-color: green;
   }
+  .category-lable {
+    background-color: #fff;
+    padding-right: 5px;
+    margin-top: -3px;
+  }
+  :global {
+    .MuiOutlinedInput-root.MuiInputBase-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.MuiSelect-root {
+      height: 40px;
+    }
+  }
 }

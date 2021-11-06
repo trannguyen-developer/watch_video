@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import { Container, Grid } from "@material-ui/core";
 
 // import classes from "./styles.module.scss";
-import SliderBar from "../../components/SliderBar";
-import ShowProduct from "../../components/ShowProduct";
-import TopProduct from "../../components/TopProduct";
-import KeyPopular from "../../components/KeyPopular";
+import SliderBar from "components/SliderBar";
+import ShowProduct from "components/ShowProduct";
+import TopProduct from "components/TopProduct";
+import KeyPopular from "components/KeyPopular";
 
 const Home = () => {
   return (
